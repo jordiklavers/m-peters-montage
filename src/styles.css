@@ -1,0 +1,30 @@
+:root {
+    --ease-default: cubic-bezier(.91,0,.06,1)
+}
+
+.btn_main_wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn_bg {
+  transform-origin: bottom;
+  transition: transform 0.8s var(--ease-default);
+
+}
+
+.btn_cutout {
+  transition: transform 0.5s var(--ease-default);
+}
+
+.btn_main_wrap:hover .btn_bg {  
+  transform: scaleY(1);
+}
+
+.btn_main_wrap:hover .btn_cutout {
+  transform: translateX(-100%);
+}
+
+.btn_main_wrap:hover .btn_cutout:last-child {
+  transform: translateX(100%);
+}
