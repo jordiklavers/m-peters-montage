@@ -33,8 +33,7 @@
 
 /* Nav Dropdown */
 @media (hover: hover) and (pointer: fine) {
-  .nav_dropdown,
-  .nav_dropdown-collection {
+  .nav_dropdown {
     visibility: hidden;
     opacity: 0;
     transform: translateY(-10px) scale(0.4) rotate(0deg);
@@ -42,8 +41,8 @@
     transition: all 0.1s var(--ease-spring);
   }
 
-  .nav_dropdown-w:hover .nav_dropdown,
-  .nav_dropdown-w:hover .nav_dropdown-collection {
+  .nav_dropdown-w:hover .nav_dropdown
+ {
     visibility: visible;
     opacity: 1;
     transform: translateY(0) scale(1) rotate(0.001deg);
@@ -52,19 +51,5 @@
 
   .nav_link:hover {
     opacity: 0.6;
-  }
-}
-
-@media (max-width: 480px) {
-  .nav_links {
-    transition: transform 0.45s var(--ease-default);
-  }
-
-  .nav_dropdown {
-    max-height: 0;
-    transition: all 0.45s var(--ease-default);
-  }
-  .nav_dropdown.is-active {
-    max-height: none;
   }
 }
